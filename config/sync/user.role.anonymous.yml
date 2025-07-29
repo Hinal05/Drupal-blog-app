@@ -1,0 +1,29 @@
+uuid: dc358d8d-39d6-4740-b149-9a86ec6a0709
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.restricted_html
+  module:
+    - comment
+    - contact
+    - filter
+    - search
+    - system
+_core:
+  default_config_hash: 6WavjUYXIegP9AAg2zXGx54MWIVoomC3SZhNiqe-Dyk
+id: anonymous
+label: 'Anonymous user'
+weight: 0
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'access site-wide contact form'
+  - 'access user profiles'
+  - 'administer users'
+  - 'cancel account'
+  - 'change own username'
+  - 'search content'
+  - 'use text format restricted_html'
+  - 'view user email addresses'
