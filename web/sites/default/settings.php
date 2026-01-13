@@ -613,6 +613,7 @@ $settings['update_free_access'] = FALSE;
  * about securing private files.
  */
 # $settings['file_private_path'] = '';
+$settings['file_private_path'] = 'sites/default/files/private';
 
 /**
  * Temporary file path:
@@ -880,3 +881,27 @@ if (getenv('IS_DDEV_PROJECT') == 'true' && file_exists(__DIR__ . '/settings.ddev
 # }
 
 $settings['config_sync_directory'] = '../config/sync';
+
+$settings['cors_allowed_headers'] = [
+  'content-type',
+  'authorization',
+  'x-csrf-token',
+  'accept',
+  'origin',
+];
+
+$settings['cors_allowed_methods'] = [
+  'GET',
+  'POST',
+  'OPTIONS',
+];
+
+$settings['cors_allowed_origins'] = [
+  'http://192.168.29.54:3000',
+];
+
+$settings['cors_exposed_headers'] = [
+  'x-csrf-token',
+];
+
+$settings['cors_allow_credentials'] = TRUE;

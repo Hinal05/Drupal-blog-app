@@ -206,19 +206,19 @@ parameters:
     # Specifies allowed headers and sets the Access-Control-Allow-Headers
     # header. For example, ['X-Custom-Header']. See
     # https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Headers
-    allowedHeaders: ['Content-Type', 'Authorization']
+    allowedHeaders: ['Content-Type', 'Authorization', 'X-CSRF-Token', 'Accept', 'Origin']
     # Specifies allowed request methods and sets the
     # Access-Control-Allow-Methods header. For example, ['POST', 'GET',
     # 'OPTIONS'] or ['*'] to allow all. Note the wildcard is not yet implemented
     # in all browsers. See
     # https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Methods
-    allowedMethods: ['POST', 'GET', 'OPTIONS', 'PATCH', 'DELETE']
+    allowedMethods: ['GET', 'POST', 'PATCH', 'DELETE', 'OPTIONS']
     # Configure requests allowed from specific origins and sets the
     # Access-Control-Allow-Origin header. For example,
     # ['https://www.drupal.org'] or ['*'] to allow any origin to access your
     # resource. See
     # https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin
-    allowedOrigins: ['http://localhost:3000']
+    allowedOrigins: ['http://drupal-decoupled.ddev.site', 'http://localhost:3000', 'http://192.168.29.54:3000']
     # Configure requests allowed from origins, matching against regex patterns.
     allowedOriginsPatterns: []
     # Sets the Access-Control-Expose-Headers header. The default is false which
@@ -227,7 +227,8 @@ parameters:
     # ['*'] to expose all headers. Setting exposedHeaders: ['*'] will result in
     # a Access-Control-Expose-Headers: * response header. See
     # https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Expose-Headers
-    exposedHeaders: false
+    exposedHeaders:
+      - 'X-CSRF-Token'
     # Setting Access-Control-Max-Age header value to '0' or false will omit this
     # from the response. However, setting it to '-1' will explicitly disable
     # caching. For example, setting the value to 600 will cache results of a
