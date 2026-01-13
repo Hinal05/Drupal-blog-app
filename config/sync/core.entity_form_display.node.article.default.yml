@@ -1,44 +1,47 @@
-uuid: df2fa985-4992-48b3-87c8-87ea467b603a
-langcode: en-gb
+uuid: 92d7720a-f99c-443e-90f0-17f57a03be17
+langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.blog.field_body
-    - field.field.node.blog.field_guest_author_name
-    - field.field.node.blog.field_image
-    - field.field.node.blog.field_tags
+    - field.field.node.article.body
+    - field.field.node.article.comment
+    - field.field.node.article.field_image
+    - field.field.node.article.field_tags
     - image.style.thumbnail
-    - node.type.blog
+    - node.type.article
   module:
+    - comment
     - image
     - path
     - text
-id: node.blog.default
+_core:
+  default_config_hash: ewbd6G2uX456-bgwseM2Q-KQG3RkASoyHmTh-XR3oLU
+id: node.article.default
 targetEntityType: node
-bundle: blog
+bundle: article
 mode: default
 content:
+  body:
+    type: text_textarea_with_summary
+    weight: 2
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  comment:
+    type: comment_default
+    weight: 20
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   created:
     type: datetime_timestamp
     weight: 10
     region: content
     settings: {  }
-    third_party_settings: {  }
-  field_body:
-    type: text_textarea
-    weight: 121
-    region: content
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-  field_guest_author_name:
-    type: string_textfield
-    weight: 122
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
     third_party_settings: {  }
   field_image:
     type: image_image
@@ -94,7 +97,7 @@ content:
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: -5
+    weight: 0
     region: content
     settings:
       size: 60

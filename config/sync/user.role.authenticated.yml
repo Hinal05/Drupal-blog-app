@@ -1,14 +1,17 @@
-uuid: 146d9299-611d-4b39-a017-f9313f34e678
-langcode: en
+uuid: ca1a8c52-b407-427b-88fb-ba2a2a7a6763
+langcode: en-gb
 status: true
 dependencies:
   config:
     - filter.format.basic_html
+    - node.type.article
+    - node.type.blog
   module:
     - comment
     - contact
     - file
     - filter
+    - node
     - search
     - shortcut
     - system
@@ -23,13 +26,18 @@ permissions:
   - 'access content'
   - 'access shortcuts'
   - 'access site-wide contact form'
-  - 'access user profiles'
-  - 'administer users'
-  - 'cancel account'
-  - 'change own username'
+  - 'create article content'
+  - 'create blog content'
+  - 'delete any blog content'
+  - 'delete blog revisions'
+  - 'delete own blog content'
   - 'delete own files'
+  - 'edit any blog content'
+  - 'edit own blog content'
   - 'post comments'
+  - 'revert blog revisions'
   - 'search content'
   - 'skip comment approval'
   - 'use text format basic_html'
-  - 'view user email addresses'
+  - 'view blog revisions'
+  - 'view own unpublished content'

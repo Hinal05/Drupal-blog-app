@@ -1,13 +1,16 @@
-uuid: dc358d8d-39d6-4740-b149-9a86ec6a0709
-langcode: en
+uuid: 5175b168-99d8-4b09-be3b-24c233153e68
+langcode: en-gb
 status: true
 dependencies:
   config:
     - filter.format.restricted_html
+    - node.type.article
+    - node.type.blog
   module:
     - comment
     - contact
     - filter
+    - node
     - search
     - system
 _core:
@@ -20,10 +23,14 @@ permissions:
   - 'access comments'
   - 'access content'
   - 'access site-wide contact form'
-  - 'access user profiles'
-  - 'administer users'
-  - 'cancel account'
-  - 'change own username'
+  - 'create article content'
+  - 'create blog content'
+  - 'delete any blog content'
+  - 'delete blog revisions'
+  - 'delete own blog content'
+  - 'edit any blog content'
+  - 'edit own blog content'
+  - 'revert blog revisions'
   - 'search content'
   - 'use text format restricted_html'
-  - 'view user email addresses'
+  - 'view blog revisions'

@@ -1,9 +1,9 @@
-uuid: 066a4467-1761-4710-9383-90e8910d22db
-langcode: en
+uuid: c15be7cf-9c5c-4b2b-8cad-b58ea9707f20
+langcode: en-gb
 status: true
 dependencies:
   config:
-    - node.type.blog
+    - node.type.article
     - node.type.page
     - taxonomy.vocabulary.tags
   module:
@@ -28,24 +28,20 @@ permissions:
   - 'access files overview'
   - 'access toolbar'
   - 'administer url aliases'
-  - 'create blog content'
+  - 'create article content'
   - 'create page content'
   - 'create terms in tags'
   - 'create url aliases'
-  - 'delete any blog content'
-  - 'delete blog revisions'
-  - 'delete own blog content'
+  - 'delete article revisions'
+  - 'delete own article content'
   - 'delete own files'
   - 'delete own page content'
   - 'delete page revisions'
-  - 'edit any blog content'
-  - 'edit own blog content'
+  - 'edit own article content'
   - 'edit own comments'
   - 'edit own page content'
   - 'edit terms in tags'
   - 'revert all revisions'
-  - 'revert blog revisions'
   - 'view all revisions'
-  - 'view blog revisions'
   - 'view own unpublished content'
   - 'view the administration theme'

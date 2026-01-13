@@ -23,6 +23,8 @@
         "drupal/core-recommended": "^11.2",
         "drupal/jsonapi_extras": "^3.26",
         "drupal/pathauto": "^1.13",
+        "drupal/simple_oauth": "^6.1",
+        "drupal/simple_oauth_static_scope": "^6.1",
         "drush/drush": "^13.6"
     },
     "conflict": {

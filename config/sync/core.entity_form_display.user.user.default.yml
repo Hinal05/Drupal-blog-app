@@ -1,9 +1,10 @@
-uuid: f703c000-2d99-4f4b-8e10-b68b50b66953
+uuid: 63e44551-5d13-4f53-b6a2-e595fe2607e0
 langcode: en
 status: true
 dependencies:
   config:
     - field.field.user.user.field_bio
+    - field.field.user.user.field_display_name
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
@@ -26,10 +27,18 @@ content:
     region: content
   field_bio:
     type: text_textarea
-    weight: 31
+    weight: 32
     region: content
     settings:
       rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_display_name:
+    type: string_textfield
+    weight: 31
+    region: content
+    settings:
+      size: 60
       placeholder: ''
     third_party_settings: {  }
   language:
@@ -52,4 +61,5 @@ content:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  langcode: true

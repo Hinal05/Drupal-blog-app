@@ -1,10 +1,11 @@
-uuid: ae089e83-251e-49f8-83c1-803901b21435
+uuid: 73d332bc-7910-4669-ab5a-013d0cdbe030
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.user.compact
     - field.field.user.user.field_bio
+    - field.field.user.user.field_display_name
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
@@ -30,4 +31,6 @@ content:
     region: content
 hidden:
   field_bio: true
+  field_display_name: true
+  langcode: true
   member_for: true

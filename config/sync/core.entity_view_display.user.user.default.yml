@@ -1,9 +1,10 @@
-uuid: dabf117f-1132-4614-82e0-f7c8aa8c7910
+uuid: 0c130869-dd7f-4b9b-850e-e590b72d1bf5
 langcode: en
 status: true
 dependencies:
   config:
     - field.field.user.user.field_bio
+    - field.field.user.user.field_display_name
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
@@ -22,6 +23,14 @@ content:
     label: above
     settings: {  }
     third_party_settings: {  }
+    weight: 7
+    region: content
+  field_display_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
     weight: 6
     region: content
   member_for:
@@ -38,4 +47,5 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
-hidden: {  }
+hidden:
+  langcode: true

@@ -1,5 +1,5 @@
-uuid: d0c85356-33bf-4b15-ab21-564fac337029
-langcode: en
+uuid: 98283c1f-5065-4cd1-a82f-cf0acaec5532
+langcode: en-gb
 status: true
 dependencies:
   module:
@@ -13,6 +13,6 @@ name: Blog
 type: blog
 description: null
 help: null
-new_revision: false
+new_revision: true
 preview_mode: 1
 display_submitted: true
